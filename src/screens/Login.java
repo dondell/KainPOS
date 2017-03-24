@@ -7,6 +7,7 @@ package screens;
 
 import cli.login.LoginLib;
 import java.awt.Dimension;
+import java.awt.Frame;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
@@ -89,7 +90,11 @@ public class Login extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (loginLib.login(jTextField1.getText(), jTextField2.getText()) == true) {
-            JOptionPane.showMessageDialog(null, "Login Successfully");
+            //JOptionPane.showMessageDialog(null, "Login Successfully");
+            ((Frame)Login.this.getTopLevelAncestor()).dispose();
+            POSFrame pos = new POSFrame();
+            pos.setVisible(true);
+            pos.show(true);
         } else {
             JOptionPane.showMessageDialog(null, "Login Fail!");
         }

@@ -16,7 +16,7 @@ public class DBConnection {
     private static String readFile = System.getProperty("user.dir") + "/src/dataconnection/config.ini";
     private static String jdbcUrl = "jdbc:mysql://";
     private static String dbUrl;
-    private static String mySqlUsername = "admin";   //Default username value
+    private static String mySqlUsername = "root";   //Default username value
     private static String mySqlPassword = "admin";  //Default password value
     public static Connection conn;
 
